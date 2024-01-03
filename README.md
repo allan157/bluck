@@ -1,6 +1,6 @@
 # bluck
 
-A new Flutter project.
+A social media app made using Flutter and Dart
 
 ## Getting Started
 
