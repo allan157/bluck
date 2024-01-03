@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -22,6 +24,9 @@ class LoginPage extends StatelessWidget {
           'Login to Continue', style: TextStyle(
             color: Colors.white,
         ),),
+        SizedBox(
+          height: 16,
+        ),
         TextField(
           decoration: InputDecoration(
             hintText: 'Username',
@@ -33,14 +38,58 @@ class LoginPage extends StatelessWidget {
             fillColor: Colors.white.withOpacity(0.5),
             ),
         ),
+        SizedBox(
+          height: 16,
+        ),
         TextField(
           decoration: InputDecoration(
-            hintText: 'Password'),
+            hintText: 'Password',
+            border:OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(12),
+              ),
+              ),
+            filled: true,
+            fillColor: Colors.white.withOpacity(0.5),
+            ),
         ),
-        TextButton(onPressed: () {}, child: Text('Forgot Password?')),
-        ElevatedButton(onPressed: (){}, child: Text('Log in')),
-        Text('Or sign in with'),
-        ElevatedButton(onPressed: (){}, 
+        
+        Align(
+          alignment: Alignment.centerRight,
+          child: TextButton(
+          onPressed: () {},
+          style:TextButton.styleFrom(
+            foregroundColor: Colors.white,
+          ),
+          child: Text('Forgot Password?')),
+        ),
+        SizedBox(
+          width: 250,
+          child: ElevatedButton(
+            onPressed: (){},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.amber,
+              foregroundColor: Colors.black,
+            ),
+            child: Text('Log in')
+            ),
+        ),
+        SizedBox(
+          height: 62,
+        ),
+        Text('Or sign in with',
+        style: TextStyle(
+          color: Colors.white,
+        ),
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        ElevatedButton(
+        onPressed: (){},
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+        ),
         child: Row(
           children: [
              Image.asset('assets/images/google.png',width: 22, height: 22,),
