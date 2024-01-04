@@ -15,6 +15,7 @@ class LoginPage extends StatelessWidget {
           color: Colors.white,
           fontSize: 16,
           fontWeight: FontWeight.bold,
+          fontFamily: 'Urbanist'
         ),
         ),
         SizedBox(
@@ -89,18 +90,42 @@ class LoginPage extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(50),
+            ),
+
+          ),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-             Image.asset('assets/images/google.png',width: 22, height: 22,),
+             Image.asset('assets/images/google.png',width: 22, height: 22,
+             ),
+             SizedBox(width: 8,
+             ),
              Text('Login with Google')
           ],
         ),
         ),
-        ElevatedButton(onPressed:() {}  ,
+        ElevatedButton(
+          onPressed:() {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
+            shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(50),
+            ),
+          ),
+          ) ,
          child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,       
           children: [
-            Image.asset('assets/images/facebook.png', height: 22, width: 22,),
+            Image.asset('assets/images/facebook.png',
+             height: 22, width: 22,
+             ),
+             SizedBox(
+                width: 8,
+             ),
             Text('Login with facebook'),
          ],
          ),
@@ -108,9 +133,19 @@ class LoginPage extends StatelessWidget {
 
          Row(
           children: [
-            Text('Don,t have an account? '),
-            TextButton(onPressed: () {},
-             child: Text('Sign Up'))
+            Text('Don,t have an account? ',
+            style:TextStyle(
+              color: Colors.white,
+            ), ),
+            TextButton(onPressed: () {}, 
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.amber,
+            ),
+             child: Text('Sign Up', style: TextStyle(
+              decoration: TextDecoration.underline,
+             ),
+             ),
+             ),
           ],
          )
       ]),
